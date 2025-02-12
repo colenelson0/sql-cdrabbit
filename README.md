@@ -1,38 +1,33 @@
 # Overview
 
-{Important! Do not say in this section that this is college assignment. Talk about what you are trying to accomplish as a software engineer to further your learning.}
+This program allows a user to interact with a database which contains CDs and artists for those CDs. In order to get started, the user must first create the database by running the 'create-db.py' file, which by default contains 15 artists and 20 CDs.
+The program offers seven options for action: The first three options allow the user to view the CDs that are in stock, the list of CDs in the database, and the list of artists in the database. The next two options allow the user to add copies of CDs to the inventory and report new sales for the CDs. The last two options allow the user to add their own artists and CDs to the database.
 
-{Provide a description of the software that you wrote and how it integrates with a SQL Relational Database. Describe how to use your program.}
+The reason that I decided to make this program with these tools is to show how useful and easy to use SQL databases are, as well as how fun they can be. Python and sqlite3 have been great tools for learning how the front end and back end interact in a software environment.
 
-{Describe your purpose for writing this software.}
-
-{Provide a link to your YouTube demonstration. It should be a 4-5 minute demo of the software running, a walkthrough of the code, and a view of how created the Relational Database.}
-
-[Software Demo Video](http://youtube.link.goes.here)
+[CD Database Program in Python](https://www.youtube.com/watch?v=9l9gGHLWSWA)
 
 # Relational Database
 
-{Describe the relational database you are using.}
+The database contains data for CDs in a CD store (a store called CDrabbit, specifically), as well the artists and bands attributed to those CDs.
 
-{Describe the structure (tables) of the relational database that you created.}
+The table for CDs, called cd, contains a primary key, a title for the CD, the foreign key for the artist, the genre of the CD, the release year of the CD, the number of copies currently in stock, and the number of sales for the CD. The table for the artists and bands, called artist, contains a primary key, a name for the artist/band, and the type, which is whether it is a solo artist, a group/band, or not specified to be either.
 
 # Development Environment
 
-{Describe the tools that you used to develop the software}
+The main program for the project was developed using Visual Studio Code for Mac, since it tends to work well with Python programs. The sql file was initially developed using MySQL Workbench, but due to the differences between MySQL and sqlite, it was mostly rewritten using VS Code.
 
-{Describe the programming language that you used and any libraries.}
+The programs for this project were developed using Python and the sqlite3 library.
 
 # Useful Websites
 
-{Make a list of websites that you found helpful in this project}
-
-- [Web Site Name](http://url.link.goes.here)
-- [Web Site Name](http://url.link.goes.here)
+- [Python sqlite3 Tutorial](https://docs.python.org/3/library/sqlite3.html#tutorial)
+- [How To Use One-to-Many Database Relationships with SQLite](https://www.digitalocean.com/community/tutorials/how-to-use-one-to-many-database-relationships-with-flask-and-sqlite)
+- [SQLite SELECT](https://www.sqlite.org/lang_select.html)
+- [Python String Methods](https://www.w3schools.com/python/python_ref_string.asp)
+- [SQL UPDATE Statement](https://www.w3schools.com/sql/sql_update.asp)
 
 # Future Work
 
-{Make a list of things that you need to fix, improve, and add in the future.}
-
-- Item 1
-- Item 2
-- Item 3
+- Allow the user to select the artist they want to attribute to a CD if there are more than one with the same name
+- Add more practical use to the artist_type column in the artist table
